@@ -1,7 +1,6 @@
 package servlets;
 
 import models.Hero;
-import services.UserService;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -24,14 +23,11 @@ public class HeroServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Hero> users = service.findAllUsers();
-        req.setAttribute("users", users);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("src/main/webapp/index.html");
-        dispatcher.forward(req, resp);
+        req.getRequestDispatcher("/webapp/index.jsp").forward(req,resp);
 
     }
 
-    /@Override
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
     /*

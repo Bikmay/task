@@ -1,3 +1,4 @@
+<%@page contentType="text/html; charset=UTF-8"%>
 
 <html lang="en">
 <head>
@@ -5,6 +6,6 @@
     <title>Title</title>
 </head>
 <body>
-<p>govno</p>
+<p>test</p>
 </body>
 </html>
